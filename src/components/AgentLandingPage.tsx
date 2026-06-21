@@ -100,11 +100,11 @@ function HeroSection() {
       <div style={{ position: "relative", zIndex: 1, width: "100%", padding: "0 2.5rem 5rem", minWidth: 0, textAlign: "center" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           {/* Headshot + verified */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "1.5rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", marginBottom: "2rem" }}>
             <img
               src={AGENT.headshotUrl}
               alt={AGENT.name}
-              style={{ width: "72px", height: "72px", borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(200,169,110,0.6)" }}
+              style={{ width: "160px", height: "160px", borderRadius: "50%", objectFit: "cover", border: "3px solid rgba(200,169,110,0.7)" }}
             />
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>

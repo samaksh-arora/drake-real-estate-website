@@ -1,15 +1,15 @@
 // ─────────────────────────────────────────────────────────────────
 // AGENT CONFIGURATION — DRAKE O'DONNELL
 // ─────────────────────────────────────────────────────────────────
-// TODO: Replace headshotUrl and heroBackgroundUrl with real photos from Drake.
-//       Currently using placeholder Unsplash images.
+// TODO: Replace heroBackgroundUrl with real hero photo from Drake.
+//       Headshot is using Drake's photo from src/assets/drake-headshot.jpeg
 
 export const agentConfig = {
   name: "Drake O'Donnell",
   title: "REALTOR®",
   brokerage: "NATOD Management",
   licenseNumber: "Michigan 6501460024",
-  headshotUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+  headshotUrl: "/src/assets/drake-headshot.jpeg",
   heroBackgroundUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
   bio: `I specialize in Detroit real estate — helping investors, first-time buyers, and families find properties with real value and long-term potential. From move-in ready homes to renovation opportunities, I know the Detroit west side market and I get deals closed.`,
   specializations: ["Investment Properties", "First-Time Buyers", "Renovation Opportunities", "Land Contracts", "Detroit West Side"],

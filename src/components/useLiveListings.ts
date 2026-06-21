@@ -15,7 +15,7 @@
 // ─────────────────────────────────────────────────────────────────
 
 import { useState, useEffect } from "react";
-import { Listing, ListingStatus } from "../data/agentConfig";
+import type { Listing, ListingStatus } from "./agentConfig";
 
 interface UseLiveListingsResult {
   listings: Listing[];
@@ -24,15 +24,15 @@ interface UseLiveListingsResult {
 }
 
 // Swap this URL to your actual MLS proxy endpoint when ready.
-const MLS_PROXY_BASE_URL = "/api/listings";
+// const MLS_PROXY_BASE_URL = "/api/listings";
 
 export function useLiveListings(
   status: ListingStatus,
   agentMlsId: string
 ): UseLiveListingsResult {
-  const [listings, setListings] = useState<Listing[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [listings] = useState<Listing[]>([]);
+  const [isLoading] = useState(false);
+  const [error] = useState<string | null>(null);
 
   useEffect(() => {
     // TODO: Remove this early return once the MLS proxy endpoint is live.

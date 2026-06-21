@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { agentConfig, testimonials, mockActiveListings, mockSoldListings } from "./agentConfig";
 
 // ─── Types ────────────────────────────────────────────────────────
@@ -218,16 +218,6 @@ function AboutSection() {
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", lineHeight: 1.8, color: "#444", marginBottom: "2rem" }}>
             {AGENT.bio}
           </p>
-          <div style={{ display: "flex", gap: "2rem" }}>
-            <div>
-              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 300, color: "#0F1F14" }}>
-                {AGENT.yearsExperience}
-              </div>
-              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#888" }}>
-                Years experience
-              </div>
-            </div>
-          </div>
         </div>
 
         <div style={{ paddingTop: "3.5rem" }}>

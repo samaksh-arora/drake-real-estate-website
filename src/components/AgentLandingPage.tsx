@@ -55,6 +55,8 @@ function Navbar() {
       background: isScrolled ? "rgba(107,57,57,0.96)" : "transparent",
       backdropFilter: isScrolled ? "blur(12px)" : "none",
       borderBottom: isScrolled ? "1px solid rgba(218,165,32,0.15)" : "none",
+      opacity: isScrolled ? 1 : 0,
+      pointerEvents: isScrolled ? "auto" : "none",
       transition: "all 0.3s ease",
     }}>
       <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", color: "#DAA520", letterSpacing: "0.08em" }}>
@@ -80,7 +82,7 @@ function HeroSection() {
   return (
     <section style={{
       position: "relative", height: "100vh", minHeight: "600px",
-      display: "flex", alignItems: "flex-end",
+      display: "flex", alignItems: "center", justifyContent: "center",
       overflow: "hidden",
     }}>
       {/* Background photo */}
@@ -97,7 +99,7 @@ function HeroSection() {
       }} />
 
       {/* Content */}
-      <div style={{ position: "relative", zIndex: 1, width: "100%", padding: "0 2.5rem 5rem", minWidth: 0, textAlign: "center" }}>
+      <div style={{ position: "relative", zIndex: 1, width: "100%", padding: "0 2.5rem", minWidth: 0, textAlign: "center" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           {/* Headshot + verified */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", marginBottom: "2rem" }}>
@@ -237,14 +239,6 @@ function AboutSection() {
                 </span>
               ))}
             </div>
-          </div>
-          <div>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.75rem" }}>
-              Languages
-            </p>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#444" }}>
-              {AGENT.languages.join(" · ")}
-            </p>
           </div>
         </div>
       </div>

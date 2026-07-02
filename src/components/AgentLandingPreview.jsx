@@ -255,10 +255,6 @@ export default function AgentPage() {
                 ))}
               </div>
             </div>
-            <div>
-              <p style={{ ...sans, fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: C.green, marginBottom: "0.75rem" }}>Languages</p>
-              <p style={{ ...sans, fontSize: "0.875rem", color: "#444" }}>{AGENT.languages.join(" · ")}</p>
-            </div>
           </div>
         </div>
       </section>

@@ -90,7 +90,7 @@ function HeroSection() {
         position: "absolute", inset: 0,
         backgroundImage: `url(${AGENT.heroBackgroundUrl})`,
         backgroundSize: "cover", backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "scroll",
       }} />
       {/* Dark gradient overlay */}
       <div style={{

@@ -11,14 +11,13 @@ export const agentConfig = {
   licenseNumber: "Michigan 6501460024",
   headshotUrl: "/drake-headshot.jpeg",
   heroBackgroundUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
-  bio: `I specialize in Detroit real estate — helping investors, first-time buyers, and families find properties with real value and long-term potential. From move-in ready homes to renovation opportunities, I know the Detroit west side market and I get deals closed.`,
-  specializations: ["Investment Properties", "First-Time Buyers", "Renovation Opportunities", "Land Contracts", "Detroit West Side"],
+  bio: `Hello, my name is Drake O'Donnell, and I'm a Metro Detroit based Real Estate professional helping homeowners sell their properties for maximum value. Born and raised in Livonia and deeply connected to the culture of Detroit and the surrounding communities, I bring a local's perspective and a modern approach to every listing I represent. In my first two years in the business I've closed over 50 transactions, a pace that reflects my commitment to my clients and my drive to deliver results. My strategy combines targeted social media marketing with a trusted network of qualified buyers to get your home in front of the right people quickly and efficiently. What sets me apart is my belief that real estate is relational, not transactional. I'm far more interested in having a genuine conversation about your goals than chasing a quick listing. When you list with me, you get a partner who will take the time to understand what matters most to you, price your home strategically, and negotiate every detail to protect your bottom line. I stay connected with every client I've ever worked with because the relationship doesn't end at the closing table, it starts there. I'd love the opportunity to earn your trust and help you achieve your real estate goals.`,
+  specializations: ["Investment Properties", "Single Family Homes", "Multifamily Homes"],
   languages: ["English"],
 
   contact: {
     phone: "(313) 693-0984",
-    // TODO: Confirm email — currently using placeholder
-    email: "drake@natodmanagement.com",
+    email: "DrakeOD@natodmgt.com",
     instagram: "https://instagram.com/drakeodonnell_",
     facebook: "https://facebook.com/drake.o.donnell.2025",
     linkedin: "https://linkedin.com/in/drake-o'donnell-a7586a320",
@@ -31,7 +30,7 @@ export const agentConfig = {
     { label: "Avg. Days on Market", value: "TBD" }, // TODO: unknown
   ],
 
-  serviceAreas: ["Detroit", "Auburn Hills", "Highland Park", "Warren", "Pontiac", "Westland"],
+  serviceAreas: ["Oakland County", "Wayne County", "Macomb County"],
 
   // Google Places API — proxy through your serverless function
   // GET /api/reviews → returns { rating, reviewCount, reviews[] }
@@ -39,7 +38,7 @@ export const agentConfig = {
 
   brokerageInfo: {
     name: "NATOD Management",
-    address: "Auburn Hills, MI", // TODO: Full address unknown
+    address: "1801 N Opdyke Rd, Auburn Hills, MI 48236",
     phone: "(866) 515-1919",
     logoUrl: null, // set to a URL string if you have a logo
   },
@@ -58,24 +57,24 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    reviewerName: "Client Name",
-    reviewerRole: "Client Type · Location",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    reviewerName: "Jerry Givens",
+    reviewerRole: "Home Seller · Pontiac, MI",
+    text: "Drake did a great job from start to finish. He negotiated well and sold my house for the asking price. I absolutely would use him again in the future.",
   },
   {
-    reviewerName: "Client Name",
-    reviewerRole: "Client Type · Location",
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    reviewerName: "jbrawnllc",
+    reviewerRole: "Home Seller · Pontiac, MI",
+    text: "Drake did an amazing job listing my homes for sale. Within the first few days, I had multiple offers. He really did his homework and made sure I was happy with the offers before moving forward.",
   },
   {
-    reviewerName: "Client Name",
-    reviewerRole: "Client Type · Location",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    reviewerName: "sulaiman massar",
+    reviewerRole: "Home Seller · Westland, MI",
+    text: "Working with Drake was an excellent experience from start to finish. He was professional, knowledgeable, and truly had my best interests in mind. Drake made everything feel smooth and straightforward.",
   },
   {
-    reviewerName: "Client Name",
-    reviewerRole: "Client Type · Location",
-    text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    reviewerName: "chinaashcrash",
+    reviewerRole: "Investment Property Seller · Pontiac, MI",
+    text: "Drake completely changed how the property was being positioned. He really understood the investment angle, the cashflow, and the tenant situation. He took over and got results.",
   },
 ];
 

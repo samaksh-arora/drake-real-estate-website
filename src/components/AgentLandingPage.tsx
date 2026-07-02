@@ -52,23 +52,23 @@ function Navbar() {
       padding: "0 2rem",
       height: "64px",
       display: "flex", alignItems: "center", justifyContent: "space-between",
-      background: isScrolled ? "rgba(15,31,20,0.96)" : "transparent",
+      background: isScrolled ? "rgba(107,57,57,0.96)" : "transparent",
       backdropFilter: isScrolled ? "blur(12px)" : "none",
-      borderBottom: isScrolled ? "1px solid rgba(200,169,110,0.15)" : "none",
+      borderBottom: isScrolled ? "1px solid rgba(218,165,32,0.15)" : "none",
       transition: "all 0.3s ease",
     }}>
-      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", color: "#C8A96E", letterSpacing: "0.08em" }}>
+      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", color: "#DAA520", letterSpacing: "0.08em" }}>
         {AGENT.name}
       </span>
       <a href="#contact" style={{
         fontFamily: "'Inter', sans-serif", fontSize: "0.75rem",
         letterSpacing: "0.12em", textTransform: "uppercase",
-        color: "#C8A96E", textDecoration: "none",
-        border: "1px solid rgba(200,169,110,0.5)",
+        color: "#DAA520", textDecoration: "none",
+        border: "1px solid rgba(218,165,32,0.5)",
         padding: "0.5rem 1.25rem", borderRadius: "2px",
         transition: "all 0.2s",
       }}
-      onMouseEnter={e => { (e.target as HTMLElement).style.background = "rgba(200,169,110,0.1)"; }}
+      onMouseEnter={e => { (e.target as HTMLElement).style.background = "rgba(218,165,32,0.1)"; }}
       onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}>
         Get in Touch
       </a>
@@ -93,7 +93,7 @@ function HeroSection() {
       {/* Dark gradient overlay */}
       <div style={{
         position: "absolute", inset: 0,
-        background: "linear-gradient(to top, rgba(15,31,20,0.92) 0%, rgba(15,31,20,0.5) 50%, rgba(15,31,20,0.2) 100%)",
+        background: "linear-gradient(to top, rgba(107,57,57,0.92) 0%, rgba(107,57,57,0.5) 50%, rgba(107,57,57,0.2) 100%)",
       }} />
 
       {/* Content */}
@@ -104,16 +104,16 @@ function HeroSection() {
             <img
               src={AGENT.headshotUrl}
               alt={AGENT.name}
-              style={{ width: "160px", height: "160px", borderRadius: "50%", objectFit: "cover", border: "3px solid rgba(200,169,110,0.7)" }}
+              style={{ width: "160px", height: "160px", borderRadius: "50%", objectFit: "cover", border: "3px solid rgba(218,165,32,0.7)" }}
             />
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#C8A96E" }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#DAA520" }}>
                   {AGENT.title} · Verified Agent
                 </span>
-                <span style={{ color: "#C8A96E", fontSize: "0.85rem" }}>✓</span>
+                <span style={{ color: "#DAA520", fontSize: "0.85rem" }}>✓</span>
               </div>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(245,242,237,0.6)" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(232,232,232,0.6)" }}>
                 {AGENT.brokerage}
               </span>
             </div>
@@ -124,7 +124,7 @@ function HeroSection() {
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(3rem, 8vw, 6rem)",
             fontWeight: 300,
-            color: "#F5F2ED",
+            color: "#E8E8E8",
             lineHeight: 1.0,
             letterSpacing: "-0.01em",
             margin: "0 0 1.5rem",
@@ -138,8 +138,8 @@ function HeroSection() {
               <span key={serviceAreaName} style={{
                 fontFamily: "'Inter', sans-serif", fontSize: "0.7rem",
                 letterSpacing: "0.08em", textTransform: "uppercase",
-                color: "rgba(245,242,237,0.6)",
-                border: "1px solid rgba(245,242,237,0.2)",
+                color: "rgba(232,232,232,0.6)",
+                border: "1px solid rgba(232,232,232,0.2)",
                 padding: "0.2rem 0.6rem", borderRadius: "2px",
               }}>
                 {serviceAreaName}
@@ -154,10 +154,10 @@ function HeroSection() {
         position: "absolute", bottom: "1.5rem", right: "2.5rem",
         display: "flex", flexDirection: "column", alignItems: "center", gap: "0.4rem",
       }}>
-        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.15em", color: "rgba(200,169,110,0.6)", textTransform: "uppercase" }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.15em", color: "rgba(218,165,32,0.6)", textTransform: "uppercase" }}>
           Scroll
         </span>
-        <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(200,169,110,0.6), transparent)" }} />
+        <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(218,165,32,0.6), transparent)" }} />
       </div>
     </section>
   );
@@ -166,32 +166,32 @@ function HeroSection() {
 function ContactStrip() {
   return (
     <div style={{
-      background: "#0F1F14",
+      background: "#6B3939",
       padding: "1.25rem 2.5rem",
       display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between",
       gap: "1rem",
-      borderBottom: "1px solid rgba(200,169,110,0.15)",
+      borderBottom: "1px solid rgba(218,165,32,0.15)",
     }}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
         <a href={`tel:${AGENT.contact.phone}`} style={{
           fontFamily: "'Inter', sans-serif", fontSize: "0.85rem",
-          color: "#F5F2ED", textDecoration: "none",
+          color: "#E8E8E8", textDecoration: "none",
           display: "flex", alignItems: "center", gap: "0.5rem",
         }}>
-          <span style={{ color: "#C8A96E" }}>📞</span> {AGENT.contact.phone}
+          <span style={{ color: "#DAA520" }}>📞</span> {AGENT.contact.phone}
         </a>
         <a href={`mailto:${AGENT.contact.email}`} style={{
           fontFamily: "'Inter', sans-serif", fontSize: "0.85rem",
-          color: "#F5F2ED", textDecoration: "none",
+          color: "#E8E8E8", textDecoration: "none",
           display: "flex", alignItems: "center", gap: "0.5rem",
         }}>
-          <span style={{ color: "#C8A96E" }}>✉</span> {AGENT.contact.email}
+          <span style={{ color: "#DAA520" }}>✉</span> {AGENT.contact.email}
         </a>
       </div>
       <a href="#contact" style={{
         fontFamily: "'Inter', sans-serif", fontSize: "0.75rem",
         letterSpacing: "0.1em", textTransform: "uppercase",
-        background: "#C8A96E", color: "#0F1F14",
+        background: "#DAA520", color: "#6B3939",
         padding: "0.6rem 1.5rem", borderRadius: "2px",
         textDecoration: "none", fontWeight: 500,
         transition: "opacity 0.2s",
@@ -206,13 +206,13 @@ function ContactStrip() {
 
 function AboutSection() {
   return (
-    <section style={{ background: "#F5F2ED", padding: "6rem 2.5rem" }}>
+    <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }}>
         <div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "1rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "1rem" }}>
             About
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#0F1F14", lineHeight: 1.15, marginBottom: "1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#6B3939", lineHeight: 1.15, marginBottom: "1.5rem" }}>
             Local knowledge.<br />Long-term results.
           </h2>
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", lineHeight: 1.8, color: "#444", marginBottom: "2rem" }}>
@@ -222,7 +222,7 @@ function AboutSection() {
 
         <div style={{ paddingTop: "3.5rem" }}>
           <div style={{ marginBottom: "2.5rem" }}>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "0.75rem" }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.75rem" }}>
               Specializations
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -230,8 +230,8 @@ function AboutSection() {
                 <span key={specializationName} style={{
                   fontFamily: "'Inter', sans-serif", fontSize: "0.78rem",
                   padding: "0.4rem 0.9rem",
-                  border: "1px solid rgba(42,74,53,0.3)",
-                  borderRadius: "2px", color: "#2A4A35",
+                  border: "1px solid rgba(139,58,58,0.3)",
+                  borderRadius: "2px", color: "#8B3A3A",
                 }}>
                   {specializationName}
                 </span>
@@ -239,7 +239,7 @@ function AboutSection() {
             </div>
           </div>
           <div>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "0.75rem" }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.75rem" }}>
               Languages
             </p>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#444" }}>
@@ -264,14 +264,14 @@ function ListingCard({ listing }: { listing: Listing }) {
     onMouseEnter={e => {
       const card = e.currentTarget as HTMLElement;
       card.style.transform = "translateY(-4px)";
-      card.style.boxShadow = "0 12px 32px rgba(15,31,20,0.12)";
+      card.style.boxShadow = "0 12px 32px rgba(107,57,57,0.12)";
     }}
     onMouseLeave={e => {
       const card = e.currentTarget as HTMLElement;
       card.style.transform = "translateY(0)";
       card.style.boxShadow = "none";
     }}>
-      <div style={{ position: "relative", paddingBottom: "60%", overflow: "hidden" }}>
+      <div style={{ position: "relative", paddingBottom: "80%", overflow: "hidden" }}>
         <img
           src={listing.photoUrl}
           alt={listing.address}
@@ -280,7 +280,7 @@ function ListingCard({ listing }: { listing: Listing }) {
         {listing.status === "sold" && (
           <div style={{
             position: "absolute", top: "1rem", left: "1rem",
-            background: "#0F1F14", color: "#C8A96E",
+            background: "#6B3939", color: "#DAA520",
             fontFamily: "'Inter', sans-serif", fontSize: "0.65rem",
             letterSpacing: "0.12em", textTransform: "uppercase",
             padding: "0.3rem 0.7rem", borderRadius: "2px",
@@ -290,7 +290,7 @@ function ListingCard({ listing }: { listing: Listing }) {
         )}
       </div>
       <div style={{ padding: "1.25rem" }}>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 400, color: "#0F1F14", marginBottom: "0.25rem" }}>
+        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 400, color: "#6B3939", marginBottom: "0.25rem" }}>
           {formatListingPrice(listing.price)}
           {listing.status === "sold" && listing.closedDate && (
             <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "#888", fontWeight: 400, marginLeft: "0.5rem" }}>
@@ -322,17 +322,17 @@ function ListingsSection() {
   const activeListings = mockActiveListings;
 
   return (
-    <section style={{ background: "#F5F2ED", padding: "6rem 2.5rem" }}>
+    <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
         <div style={{ marginBottom: "3rem" }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "0.5rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.5rem" }}>
             Current listings
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#0F1F14", margin: "0 0 1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", margin: "0 0 1.5rem" }}>
             Available Now
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
           {activeListings.map(listingItem => (
             <ListingCard key={listingItem.id} listing={listingItem} />
           ))}
@@ -343,26 +343,48 @@ function ListingsSection() {
 }
 
 function SoldDealsSection() {
-  // TODO: When MLS integration is ready, replace mockSoldListings with:
-  // const { listings, isLoading } = useLiveListings("sold", AGENT_MLS_ID);
+  const [isExpanded, setIsExpanded] = useState(false);
   const soldListings = mockSoldListings;
 
   return (
     <section style={{ background: "#fff", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        <div style={{ marginBottom: "3rem" }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "0.5rem" }}>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          style={{
+            width: "100%",
+            background: "none",
+            border: "none",
+            padding: "0 0 3rem 0",
+            cursor: "pointer",
+            textAlign: "left",
+            transition: "all 0.2s ease",
+          }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.5rem" }}>
             Track record
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#0F1F14", margin: 0 }}>
-            Recently Sold
-          </h2>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
-          {soldListings.map(soldListingItem => (
-            <ListingCard key={soldListingItem.id} listing={soldListingItem} />
-          ))}
-        </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", margin: 0, flex: 1 }}>
+              Recently Sold
+            </h2>
+            <span style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "1.5rem",
+              color: "#6B3939",
+              transition: "transform 0.3s ease",
+              transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+            }}>
+              ▼
+            </span>
+          </div>
+        </button>
+        {isExpanded && (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            {soldListings.map(soldListingItem => (
+              <ListingCard key={soldListingItem.id} listing={soldListingItem} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -371,22 +393,22 @@ function SoldDealsSection() {
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div style={{
-      background: "rgba(245,242,237,0.05)",
-      border: "1px solid rgba(200,169,110,0.15)",
+      background: "rgba(232,232,232,0.05)",
+      border: "1px solid rgba(218,165,32,0.15)",
       borderRadius: "2px",
       padding: "2rem",
     }}>
-      <div style={{ color: "#C8A96E", fontSize: "0.9rem", letterSpacing: "0.08em", marginBottom: "1rem" }}>
+      <div style={{ color: "#DAA520", fontSize: "0.9rem", letterSpacing: "0.08em", marginBottom: "1rem" }}>
         ★★★★★
       </div>
-      <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 300, color: "#F5F2ED", lineHeight: 1.7, marginBottom: "1.25rem", fontStyle: "italic" }}>
+      <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 300, color: "#E8E8E8", lineHeight: 1.7, marginBottom: "1.25rem", fontStyle: "italic" }}>
         "{testimonial.text}"
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: "#C8A96E" }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: "#DAA520" }}>
           {testimonial.reviewerName}
         </span>
-        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(245,242,237,0.5)", letterSpacing: "0.06em" }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(232,232,232,0.5)", letterSpacing: "0.06em" }}>
           {testimonial.reviewerRole}
         </span>
       </div>
@@ -397,13 +419,13 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 // TODO: swap this section for ReviewsSection once Google reviews are live
 function TestimonialsSection() {
   return (
-    <section style={{ background: "#0F1F14", padding: "6rem 2.5rem" }}>
+    <section style={{ background: "#6B3939", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div style={{ marginBottom: "3rem" }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#C8A96E", marginBottom: "0.5rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#DAA520", marginBottom: "0.5rem" }}>
             Client testimonials
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#F5F2ED", margin: 0 }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#E8E8E8", margin: 0 }}>
             What clients say
           </h2>
         </div>
@@ -419,13 +441,13 @@ function TestimonialsSection() {
 
 function ServiceAreaSection() {
   return (
-    <section style={{ background: "#F5F2ED", padding: "6rem 2.5rem" }}>
+    <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
         <div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#2A4A35", marginBottom: "1rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "1rem" }}>
             Service area
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#0F1F14", marginBottom: "1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", marginBottom: "1.5rem" }}>
             Metro Detroit & Suburbs
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -473,16 +495,12 @@ function ContactFormSection() {
     event.preventDefault();
     setSubmitStatus("sending");
     try {
-      // TODO: Replace this with a real POST to your serverless endpoint.
-      // The endpoint should call SendGrid/SES to email the agent
-      // and Twilio/SNS to text them.
-      // const response = await fetch("/api/contact", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(formValues),
-      // });
-      // if (!response.ok) throw new Error("Submission failed");
-      await new Promise(resolve => setTimeout(resolve, 1000)); // mock delay
+      const response = await fetch("https://formspree.io/f/xlgyoboz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formValues),
+      });
+      if (!response.ok) throw new Error("Submission failed");
       setSubmitStatus("success");
       setFormValues({ name: "", email: "", phone: "", message: "" });
     } catch {
@@ -493,26 +511,26 @@ function ContactFormSection() {
   const inputStyle: React.CSSProperties = {
     width: "100%", boxSizing: "border-box",
     fontFamily: "'Inter', sans-serif", fontSize: "0.875rem",
-    background: "rgba(245,242,237,0.06)",
-    border: "1px solid rgba(200,169,110,0.2)",
-    borderRadius: "2px", color: "#F5F2ED",
+    background: "rgba(232,232,232,0.06)",
+    border: "1px solid rgba(218,165,32,0.2)",
+    borderRadius: "2px", color: "#E8E8E8",
     padding: "0.85rem 1rem", outline: "none",
   };
 
   return (
-    <section id="contact" style={{ background: "#0F1F14", padding: "6rem 2.5rem" }}>
+    <section id="contact" style={{ background: "#6B3939", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#C8A96E", marginBottom: "1rem", textAlign: "center" }}>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#DAA520", marginBottom: "1rem", textAlign: "center" }}>
           Get in touch
         </p>
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#F5F2ED", textAlign: "center", marginBottom: "3rem" }}>
+        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#E8E8E8", textAlign: "center", marginBottom: "3rem" }}>
           Ready to get started?
         </h2>
 
         {submitStatus === "success" ? (
           <div style={{ textAlign: "center", padding: "3rem" }}>
-            <div style={{ color: "#C8A96E", fontSize: "2rem", marginBottom: "1rem" }}>✓</div>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", color: "#F5F2ED" }}>
+            <div style={{ color: "#DAA520", fontSize: "2rem", marginBottom: "1rem" }}>✓</div>
+            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", color: "#E8E8E8" }}>
               Message sent. Drake will be in touch shortly.
             </p>
           </div>
@@ -520,7 +538,7 @@ function ContactFormSection() {
           <form onSubmit={handleFormSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               <div>
-                <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(245,242,237,0.4)", display: "block", marginBottom: "0.4rem" }}>
+                <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,232,0.4)", display: "block", marginBottom: "0.4rem" }}>
                   Name
                 </label>
                 <input
@@ -530,7 +548,7 @@ function ContactFormSection() {
                 />
               </div>
               <div>
-                <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(245,242,237,0.4)", display: "block", marginBottom: "0.4rem" }}>
+                <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,232,0.4)", display: "block", marginBottom: "0.4rem" }}>
                   Phone
                 </label>
                 <input
@@ -541,7 +559,7 @@ function ContactFormSection() {
               </div>
             </div>
             <div>
-              <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(245,242,237,0.4)", display: "block", marginBottom: "0.4rem" }}>
+              <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,232,0.4)", display: "block", marginBottom: "0.4rem" }}>
                 Email
               </label>
               <input
@@ -551,7 +569,7 @@ function ContactFormSection() {
               />
             </div>
             <div>
-              <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(245,242,237,0.4)", display: "block", marginBottom: "0.4rem" }}>
+              <label style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,232,0.4)", display: "block", marginBottom: "0.4rem" }}>
                 Message
               </label>
               <textarea
@@ -567,7 +585,7 @@ function ContactFormSection() {
               style={{
                 fontFamily: "'Inter', sans-serif", fontSize: "0.75rem",
                 letterSpacing: "0.12em", textTransform: "uppercase",
-                background: "#C8A96E", color: "#0F1F14",
+                background: "#DAA520", color: "#6B3939",
                 border: "none", borderRadius: "2px",
                 padding: "1rem", cursor: "pointer",
                 fontWeight: 500, marginTop: "0.5rem",
@@ -590,31 +608,31 @@ function ContactFormSection() {
 
 function Footer() {
   return (
-    <footer style={{ background: "#080F0A", padding: "2.5rem", borderTop: "1px solid rgba(200,169,110,0.1)" }}>
+    <footer style={{ background: "#3F2626", padding: "2.5rem", borderTop: "1px solid rgba(218,165,32,0.1)" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", flexWrap: "wrap", gap: "2rem", marginBottom: "2rem" }}>
           <div>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", color: "#C8A96E", marginBottom: "0.5rem" }}>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", color: "#DAA520", marginBottom: "0.5rem" }}>
               {AGENT.name}
             </div>
-            <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: "rgba(245,242,237,0.4)", lineHeight: 1.7 }}>
+            <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: "rgba(232,232,232,0.4)", lineHeight: 1.7 }}>
               {AGENT.brokerageInfo.name}<br />
               {AGENT.brokerageInfo.address}<br />
               {AGENT.brokerageInfo.phone}<br />
               License #{AGENT.licenseNumber}
             </div>
           </div>
-          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "rgba(245,242,237,0.25)", maxWidth: "400px", lineHeight: 1.7, textAlign: "right" }}>
+          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "rgba(232,232,232,0.25)", maxWidth: "400px", lineHeight: 1.7, textAlign: "right" }}>
             All listing information is deemed reliable but not guaranteed and should be independently verified. Property data sourced from the Regional MLS.
           </div>
         </div>
-        <div style={{ borderTop: "1px solid rgba(200,169,110,0.1)", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(245,242,237,0.2)" }}>
+        <div style={{ borderTop: "1px solid rgba(218,165,32,0.1)", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(232,232,232,0.2)" }}>
             © {new Date().getFullYear()} {AGENT.name} · All rights reserved
           </span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             {["Privacy Policy", "Terms of Use"].map(linkLabel => (
-              <a key={linkLabel} href="#" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(245,242,237,0.3)", textDecoration: "none" }}>
+              <a key={linkLabel} href="#" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "rgba(232,232,232,0.3)", textDecoration: "none" }}>
                 {linkLabel}
               </a>
             ))}
@@ -634,9 +652,9 @@ export default function AgentLandingPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { background: #F5F2ED; }
-        ::placeholder { color: rgba(245,242,237,0.25); }
-        input:focus, textarea:focus { border-color: rgba(200,169,110,0.5) !important; }
+        body { background: #E8E8E8; }
+        ::placeholder { color: rgba(232,232,232,0.25); }
+        input:focus, textarea:focus { border-color: rgba(218,165,32,0.5) !important; }
         @media (max-width: 768px) {
           section {
             padding: 3rem 1.5rem !important;

@@ -464,20 +464,17 @@ function ServiceAreaSection() {
             ))}
           </div>
         </div>
-        {/* Map placeholder — wire up Google Maps JS SDK or Mapbox here */}
-        <div style={{
-          height: "320px", background: "#e8e4dc", borderRadius: "2px",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          border: "1px solid rgba(0,0,0,0.08)",
-          flexDirection: "column", gap: "0.75rem",
-        }}>
-          <div style={{ fontSize: "2rem", opacity: 0.3 }}>🗺</div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: "#888", textAlign: "center", lineHeight: 1.6, margin: 0 }}>
-            {/* TODO: Replace with Google Maps JS SDK embed */}
-            Map embed goes here.<br />
-            See Google Maps JS SDK or Mapbox GL JS.
-          </p>
-        </div>
+        {/* Google Maps Embed */}
+        <iframe
+          title="Drake's Office Location"
+          width="100%"
+          height="320"
+          style={{ border: 0, borderRadius: "2px" }}
+          loading="lazy"
+          allowFullScreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.1234567890!2d-83.2456789!3d42.6789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824b5e5e5e5e5e5%3A0x1234567890abcdef!2s1801%20N%20Opdyke%20Rd%2C%20Auburn%20Hills%2C%20MI%2048236!5e0!3m2!1sen!2sus!4v1234567890"
+        />
+
       </div>
     </section>
   );

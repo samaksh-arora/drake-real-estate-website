@@ -90,8 +90,8 @@ function HeroSection() {
         position: "absolute", inset: 0,
         backgroundImage: `url(${AGENT.heroBackgroundUrl})`,
         backgroundSize: "cover", backgroundPosition: "center",
-        backgroundAttachment: "scroll",
-      }} />
+        backgroundAttachment: "fixed",
+      }} className="hero-bg" />
       {/* Dark gradient overlay */}
       <div style={{
         position: "absolute", inset: 0,
@@ -739,6 +739,9 @@ export default function AgentLandingPage() {
           }
           button {
             width: 100% !important;
+          }
+          .hero-bg {
+            background-attachment: scroll !important;
           }
         }
       `}</style>

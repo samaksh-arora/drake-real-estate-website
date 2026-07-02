@@ -10,7 +10,7 @@ export const agentConfig = {
   brokerage: "NATOD Management",
   licenseNumber: "Michigan 6501460024",
   headshotUrl: "/drake-headshot.jpeg",
-  heroBackgroundUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+  heroBackgroundUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=80",
   bio: `Hello, my name is Drake O'Donnell, and I'm a Metro Detroit based Real Estate professional helping homeowners sell their properties for maximum value. Born and raised in Livonia and deeply connected to the culture of Detroit and the surrounding communities, I bring a local's perspective and a modern approach to every listing I represent. In my first two years in the business I've closed over 50 transactions, a pace that reflects my commitment to my clients and my drive to deliver results. My strategy combines targeted social media marketing with a trusted network of qualified buyers to get your home in front of the right people quickly and efficiently. What sets me apart is my belief that real estate is relational, not transactional. I'm far more interested in having a genuine conversation about your goals than chasing a quick listing. When you list with me, you get a partner who will take the time to understand what matters most to you, price your home strategically, and negotiate every detail to protect your bottom line. I stay connected with every client I've ever worked with because the relationship doesn't end at the closing table, it starts there. I'd love the opportunity to earn your trust and help you achieve your real estate goals.`,
   specializations: ["Investment Properties", "Single Family Homes", "Multifamily Homes"],
   languages: ["English"],

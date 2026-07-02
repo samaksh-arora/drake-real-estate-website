@@ -192,7 +192,7 @@ export default function AgentPage() {
       {/* Hero */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${AGENT.heroBackgroundUrl})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(107,57,57,0.93) 0%, rgba(107,57,57,0.45) 55%, rgba(107,57,57,0.15) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(107,57,57,0.95) 0%, rgba(107,57,57,0.7) 50%, rgba(107,57,57,0.45) 100%)" }} />
         <div style={{ position: "relative", zIndex: 1, width: "100%", padding: "0 2.5rem 5rem" }}>
           <div style={{ maxWidth: 860 }}>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>

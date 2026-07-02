@@ -95,7 +95,7 @@ function HeroSection() {
       {/* Dark gradient overlay */}
       <div style={{
         position: "absolute", inset: 0,
-        background: "linear-gradient(to top, rgba(107,57,57,0.92) 0%, rgba(107,57,57,0.5) 50%, rgba(107,57,57,0.2) 100%)",
+        background: "linear-gradient(to top, rgba(107,57,57,0.95) 0%, rgba(107,57,57,0.7) 50%, rgba(107,57,57,0.45) 100%)",
       }} />
 
       {/* Content */}

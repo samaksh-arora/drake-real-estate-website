@@ -1,24 +1,7 @@
 import { useState, useEffect } from "react";
-import { agentConfig, testimonials, mockActiveListings, mockSoldListings } from "./agentConfig";
+import { agentConfig, testimonials } from "./agentConfig";
 
 // ─── Types ────────────────────────────────────────────────────────
-type ListingStatus = "active" | "sold";
-interface Listing {
-  id: string;
-  status: ListingStatus;
-  price: number;
-  address: string;
-  city: string;
-  state: string;
-  zip: string;
-  beds: number;
-  baths: number;
-  sqft: number;
-  photoUrl: string;
-  mlsNumber?: string;
-  closedDate?: string;
-  representedSide?: "buyer" | "seller";
-}
 interface Testimonial {
   reviewerName: string;
   reviewerRole: string;
@@ -28,13 +11,6 @@ interface Testimonial {
 // Agent config imported from agentConfig.ts
 const AGENT = agentConfig;
 
-
-// ─── Helpers ─────────────────────────────────────────────────────
-const formatListingPrice = (priceInDollars: number): string =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(priceInDollars);
-
-const formatSquareFootage = (squareFeet: number): string =>
-  new Intl.NumberFormat("en-US").format(squareFeet);
 
 // ─── Sub-components ───────────────────────────────────────────────
 
@@ -265,139 +241,30 @@ function AboutSection() {
   );
 }
 
-function ListingCard({ listing }: { listing: Listing }) {
-  return (
-    <div style={{
-      background: "#fff",
-      borderRadius: "2px",
-      overflow: "hidden",
-      border: "1px solid rgba(0,0,0,0.08)",
-      transition: "transform 0.2s, box-shadow 0.2s",
-    }}
-    onMouseEnter={e => {
-      const card = e.currentTarget as HTMLElement;
-      card.style.transform = "translateY(-4px)";
-      card.style.boxShadow = "0 12px 32px rgba(107,57,57,0.12)";
-    }}
-    onMouseLeave={e => {
-      const card = e.currentTarget as HTMLElement;
-      card.style.transform = "translateY(0)";
-      card.style.boxShadow = "none";
-    }}>
-      <div style={{ position: "relative", paddingBottom: "80%", overflow: "hidden" }}>
-        <img
-          src={listing.photoUrl}
-          alt={listing.address}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-        />
-        {listing.status === "sold" && (
-          <div style={{
-            position: "absolute", top: "1rem", left: "1rem",
-            background: "#6B3939", color: "#DAA520",
-            fontFamily: "'Inter', sans-serif", fontSize: "0.65rem",
-            letterSpacing: "0.12em", textTransform: "uppercase",
-            padding: "0.3rem 0.7rem", borderRadius: "2px",
-          }}>
-            Sold {listing.representedSide === "buyer" ? "· Buyer" : "· Seller"}
-          </div>
-        )}
-      </div>
-      <div style={{ padding: "1.25rem" }}>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 400, color: "#6B3939", marginBottom: "0.25rem" }}>
-          {formatListingPrice(listing.price)}
-          {listing.status === "sold" && listing.closedDate && (
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "#888", fontWeight: 400, marginLeft: "0.5rem" }}>
-              {listing.closedDate}
-            </span>
-          )}
-        </div>
-        <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "#444", marginBottom: "0.75rem" }}>
-          {listing.address}, {listing.city}
-        </div>
-        <div style={{ display: "flex", gap: "1.25rem", fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: "#888" }}>
-          <span>{listing.beds} bd</span>
-          <span>{listing.baths} ba</span>
-          <span>{formatSquareFootage(listing.sqft)} sqft</span>
-        </div>
-        {listing.mlsNumber && (
-          <div style={{ marginTop: "0.75rem", fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "#bbb", letterSpacing: "0.06em" }}>
-            MLS #{listing.mlsNumber}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function ListingsSection() {
-  // TODO: When MLS integration is ready, replace mockActiveListings with:
-  // const { listings, isLoading } = useLiveListings("active", AGENT_MLS_ID);
-  const activeListings = mockActiveListings;
-
   return (
     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
         <div style={{ marginBottom: "3rem" }}>
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.5rem" }}>
-            Current listings
+            Current & past listings
           </p>
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", margin: "0 0 1.5rem" }}>
-            Available Now
+            Active & Sold Listings
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-          {activeListings.map(listingItem => (
-            <ListingCard key={listingItem.id} listing={listingItem} />
-          ))}
+        <div style={{ background: "#fff", borderRadius: "4px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
+          <iframe
+            src="https://matrix.realcomponline.com/Matrix/public/IDX.aspx?idx=8d7811b7"
+            title="Active & Sold Listings"
+            width="100%"
+            height="900"
+            frameBorder="0"
+            marginWidth={0}
+            marginHeight={0}
+            style={{ display: "block", border: "none" }}
+          />
         </div>
-      </div>
-    </section>
-  );
-}
-
-function SoldDealsSection() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const soldListings = mockSoldListings;
-
-  return (
-    <section style={{ background: "#fff", padding: "6rem 2.5rem" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          style={{
-            width: "100%",
-            background: "none",
-            border: "none",
-            padding: "0 0 3rem 0",
-            cursor: "pointer",
-            textAlign: "left",
-            transition: "all 0.2s ease",
-          }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.5rem" }}>
-            Track record
-          </p>
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", margin: 0, flex: 1 }}>
-              Recently Sold
-            </h2>
-            <span style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "1.5rem",
-              color: "#6B3939",
-              transition: "transform 0.3s ease",
-              transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
-            }}>
-              ▼
-            </span>
-          </div>
-        </button>
-        {isExpanded && (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {soldListings.map(soldListingItem => (
-              <ListingCard key={soldListingItem.id} listing={soldListingItem} />
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );
@@ -750,7 +617,6 @@ export default function AgentLandingPage() {
       <ContactStrip />
       <AboutSection />
       <ListingsSection />
-      <SoldDealsSection />
       <TestimonialsSection />
       <ServiceAreaSection />
       <ContactFormSection />

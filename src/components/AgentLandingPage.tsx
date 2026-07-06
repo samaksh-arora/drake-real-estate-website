@@ -409,7 +409,7 @@ function ContactFormSection() {
     event.preventDefault();
     setSubmitStatus("sending");
     try {
-      const response = await fetch("https://formspree.io/f/xlgyoboz", {
+      const response = await fetch("https://formspree.io/f/xrewdelj", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValues),

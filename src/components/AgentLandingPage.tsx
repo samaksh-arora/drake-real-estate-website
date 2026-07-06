@@ -242,6 +242,8 @@ function AboutSection() {
 }
 
 function ListingsSection() {
+  const [isFrameLoaded, setIsFrameLoaded] = useState(false);
+
   return (
     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
@@ -253,7 +255,32 @@ function ListingsSection() {
             Active & Sold Listings
           </h2>
         </div>
-        <div style={{ background: "#fff", borderRadius: "4px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
+        <div style={{
+          position: "relative",
+          background: "#fff",
+          borderRadius: "8px",
+          overflow: "hidden",
+          border: "1px solid rgba(107,57,57,0.12)",
+          boxShadow: "0 8px 28px rgba(107,57,57,0.1)",
+        }}>
+          {!isFrameLoaded && (
+            <div style={{
+              position: "absolute", inset: 0,
+              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+              gap: "1rem", background: "#fff",
+            }}>
+              <div style={{
+                width: "36px", height: "36px",
+                border: "3px solid rgba(107,57,57,0.15)",
+                borderTopColor: "#6B3939",
+                borderRadius: "50%",
+                animation: "spin 0.8s linear infinite",
+              }} />
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "#888" }}>
+                Loading listings…
+              </span>
+            </div>
+          )}
           <iframe
             src="https://matrix.realcomponline.com/Matrix/public/IDX.aspx?idx=8d7811b7"
             title="Active & Sold Listings"
@@ -262,9 +289,19 @@ function ListingsSection() {
             frameBorder="0"
             marginWidth={0}
             marginHeight={0}
-            style={{ display: "block", border: "none" }}
+            onLoad={() => setIsFrameLoaded(true)}
+            style={{
+              display: "block",
+              border: "none",
+              height: "clamp(700px, 100vh - 220px, 1200px)",
+              opacity: isFrameLoaded ? 1 : 0,
+              transition: "opacity 0.3s ease",
+            }}
           />
         </div>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "#999", marginTop: "1rem" }}>
+          Listings provided via RealComp Multiple Listing Service.
+        </p>
       </div>
     </section>
   );
@@ -532,6 +569,7 @@ export default function AgentLandingPage() {
         body { background: #E8E8E8; }
         ::placeholder { color: rgba(232,232,232,0.25); }
         input:focus, textarea:focus { border-color: rgba(218,165,32,0.5) !important; }
+        @keyframes spin { to { transform: rotate(360deg); } }
         @media (max-width: 768px) {
           section {
             padding: 3rem 1.5rem !important;

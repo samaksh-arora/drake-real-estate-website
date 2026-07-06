@@ -28,7 +28,7 @@ function Navbar() {
       padding: "0 2rem",
       height: "64px",
       display: "flex", alignItems: "center", justifyContent: "space-between",
-      background: isScrolled ? "rgba(107,57,57,0.96)" : "transparent",
+      background: isScrolled ? "rgba(50,30,30,0.96)" : "transparent",
       backdropFilter: isScrolled ? "blur(12px)" : "none",
       borderBottom: isScrolled ? "1px solid rgba(218,165,32,0.15)" : "none",
       opacity: isScrolled ? 1 : 0,
@@ -100,7 +100,7 @@ function HeroSection() {
           {/* Name — the signature element */}
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(3rem, 8vw, 6rem)",
+            fontSize: "clamp(3.25rem, 9vw, 6.75rem)",
             fontWeight: 300,
             color: "#E8E8E8",
             lineHeight: 1.0,

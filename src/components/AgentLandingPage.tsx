@@ -71,7 +71,7 @@ function HeroSection() {
       {/* Dark gradient overlay */}
       <div style={{
         position: "absolute", inset: 0,
-        background: "linear-gradient(to top, rgba(50,30,30,0.95) 0%, rgba(50,30,30,0.8) 50%, rgba(50,30,30,0.65) 100%)",
+        background: "linear-gradient(to top, rgba(50,30,30,0.7) 0%, rgba(50,30,30,0.55) 50%, rgba(50,30,30,0.4) 100%)",
       }} />
 
       {/* Content */}
@@ -86,12 +86,12 @@ function HeroSection() {
             />
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#DAA520", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#DAA520", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
                   {AGENT.title} · Verified Agent
                 </span>
-                <span style={{ color: "#DAA520", fontSize: "0.85rem", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>✓</span>
+                <span style={{ color: "#DAA520", fontSize: "1rem", fontWeight: 700, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>✓</span>
               </div>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(232,232,232,0.6)" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#DAA520", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
                 {AGENT.brokerage}
               </span>
             </div>

@@ -144,7 +144,7 @@ function HeroSection() {
 function ContactStrip() {
   return (
     <div style={{
-      background: "#6B3939",
+      background: "#562E2E",
       padding: "1.25rem 2.5rem",
       display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between",
       gap: "1rem",
@@ -169,7 +169,7 @@ function ContactStrip() {
       <a href="#contact" style={{
         fontFamily: "'Inter', sans-serif", fontSize: "0.75rem",
         letterSpacing: "0.1em", textTransform: "uppercase",
-        background: "#DAA520", color: "#6B3939",
+        background: "#DAA520", color: "#562E2E",
         padding: "0.6rem 1.5rem", borderRadius: "2px",
         textDecoration: "none", fontWeight: 500,
         transition: "opacity 0.2s",
@@ -187,10 +187,10 @@ function AboutSection() {
     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }}>
         <div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "1rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#6F2E2E", marginBottom: "1rem" }}>
             About
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#6B3939", lineHeight: 1.15, marginBottom: "1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.5rem", fontWeight: 400, color: "#562E2E", lineHeight: 1.15, marginBottom: "1.5rem" }}>
             Local knowledge.<br />Long-term results.
           </h2>
           {AGENT.bio.split('\n\n').length > 1 ? (
@@ -219,7 +219,7 @@ function AboutSection() {
 
         <div style={{ paddingTop: "3.5rem" }}>
           <div style={{ marginBottom: "2.5rem" }}>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.75rem" }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#6F2E2E", marginBottom: "0.75rem" }}>
               Specializations
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -228,7 +228,7 @@ function AboutSection() {
                   fontFamily: "'Inter', sans-serif", fontSize: "0.78rem",
                   padding: "0.4rem 0.9rem",
                   border: "1px solid rgba(139,58,58,0.3)",
-                  borderRadius: "2px", color: "#8B3A3A",
+                  borderRadius: "2px", color: "#6F2E2E",
                 }}>
                   {specializationName}
                 </span>
@@ -248,10 +248,10 @@ function ListingsSection() {
     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
         <div style={{ marginBottom: "3rem" }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "0.5rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#6F2E2E", marginBottom: "0.5rem" }}>
             Current & past listings
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", margin: "0 0 1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#562E2E", margin: "0 0 1.5rem" }}>
             Active & Sold Listings
           </h2>
         </div>
@@ -272,7 +272,7 @@ function ListingsSection() {
               <div style={{
                 width: "36px", height: "36px",
                 border: "3px solid rgba(107,57,57,0.15)",
-                borderTopColor: "#6B3939",
+                borderTopColor: "#562E2E",
                 borderRadius: "50%",
                 animation: "spin 0.8s linear infinite",
               }} />
@@ -336,7 +336,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 // TODO: swap this section for ReviewsSection once Google reviews are live
 function TestimonialsSection() {
   return (
-    <section style={{ background: "#6B3939", padding: "6rem 2.5rem" }}>
+    <section style={{ background: "#562E2E", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div style={{ marginBottom: "3rem" }}>
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#DAA520", marginBottom: "0.5rem" }}>
@@ -361,10 +361,10 @@ function ServiceAreaSection() {
     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
         <div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A3A", marginBottom: "1rem" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#6F2E2E", marginBottom: "1rem" }}>
             Service area
           </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#6B3939", marginBottom: "1.5rem" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#562E2E", marginBottom: "1.5rem" }}>
             Metro Detroit & Suburbs
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -432,7 +432,7 @@ function ContactFormSection() {
   };
 
   return (
-    <section id="contact" style={{ background: "#6B3939", padding: "6rem 2.5rem" }}>
+    <section id="contact" style={{ background: "#562E2E", padding: "6rem 2.5rem" }}>
       <div style={{ maxWidth: "600px", margin: "0 auto" }}>
         <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#DAA520", marginBottom: "1rem", textAlign: "center" }}>
           Get in touch
@@ -499,7 +499,7 @@ function ContactFormSection() {
               style={{
                 fontFamily: "'Inter', sans-serif", fontSize: "0.75rem",
                 letterSpacing: "0.12em", textTransform: "uppercase",
-                background: "#DAA520", color: "#6B3939",
+                background: "#DAA520", color: "#562E2E",
                 border: "none", borderRadius: "2px",
                 padding: "1rem", cursor: "pointer",
                 fontWeight: 500, marginTop: "0.5rem",
@@ -522,7 +522,7 @@ function ContactFormSection() {
 
 function Footer() {
   return (
-    <footer style={{ background: "#3F2626", padding: "2.5rem", borderTop: "1px solid rgba(218,165,32,0.1)" }}>
+    <footer style={{ background: "#321E1E", padding: "2.5rem", borderTop: "1px solid rgba(218,165,32,0.1)" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", flexWrap: "wrap", gap: "2rem", marginBottom: "2rem" }}>
           <div>

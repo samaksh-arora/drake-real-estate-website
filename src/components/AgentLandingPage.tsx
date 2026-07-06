@@ -71,7 +71,7 @@ function HeroSection() {
       {/* Dark gradient overlay */}
       <div style={{
         position: "absolute", inset: 0,
-        background: "linear-gradient(to top, rgba(107,57,57,0.95) 0%, rgba(107,57,57,0.7) 50%, rgba(107,57,57,0.45) 100%)",
+        background: "linear-gradient(to top, rgba(50,30,30,0.95) 0%, rgba(50,30,30,0.8) 50%, rgba(50,30,30,0.65) 100%)",
       }} />
 
       {/* Content */}
@@ -86,10 +86,10 @@ function HeroSection() {
             />
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#DAA520" }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#DAA520", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
                   {AGENT.title} · Verified Agent
                 </span>
-                <span style={{ color: "#DAA520", fontSize: "0.85rem" }}>✓</span>
+                <span style={{ color: "#DAA520", fontSize: "0.85rem", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>✓</span>
               </div>
               <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(232,232,232,0.6)" }}>
                 {AGENT.brokerage}
@@ -132,7 +132,7 @@ function HeroSection() {
         position: "absolute", bottom: "1.5rem", right: "2.5rem",
         display: "flex", flexDirection: "column", alignItems: "center", gap: "0.4rem",
       }}>
-        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.15em", color: "rgba(218,165,32,0.6)", textTransform: "uppercase" }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", letterSpacing: "0.15em", color: "rgba(218,165,32,0.6)", textTransform: "uppercase", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
           Scroll
         </span>
         <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(218,165,32,0.6), transparent)" }} />

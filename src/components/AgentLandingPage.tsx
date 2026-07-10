@@ -654,7 +654,7 @@ export default function AgentLandingPage() {
       <HeroSection />
       <ContactStrip />
       <AboutSection />
-      <ListingsSection />
+      {/* <ListingsSection /> */}
       <TestimonialsSection />
       <ServiceAreaSection />
       <ContactFormSection />

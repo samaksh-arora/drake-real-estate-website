@@ -45,7 +45,7 @@ const REVIEWS = {
     { reviewerName: "Jerry Givens", rating: 5, time: "9/29/2025", text: "Drake did a great job from start to finish. He negotiated well and sold my house for the asking price. I absolutely would use him again in the future." },
     { reviewerName: "jbrawnllc", rating: 5, time: "1/17/2026", text: "Drake did an amazing job listing my homes for sale. Within the first few days, I had multiple offers. He really did his homework and made sure I was happy with the offers before moving forward." },
     { reviewerName: "sulaiman massar", rating: 5, time: "3/13/2026", text: "Working with Drake was an excellent experience from start to finish. He was professional, knowledgeable, and truly had my best interests in mind. Drake made everything feel smooth and straightforward." },
-    { reviewerName: "chinaashcrash", rating: 5, time: "6/23/2026", text: "Drake completely changed how the property was being positioned. He really understood the investment angle, the cashflow, and the tenant situation. Results speak for themselves." },
+    { reviewerName: "Daniel Aiken", rating: 5, time: "11/6/2025", text: "Drake was extremely helpful when finding a rental house near the Wayne State campus. He showed me a variety of options online and came out many times to show the property and ensure that we loved our decision. Working with Drake was extremely easy and I recommend him to anyone who is looking to take action ASAP!" },
   ],
 };
 

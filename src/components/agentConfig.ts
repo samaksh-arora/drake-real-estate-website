@@ -70,9 +70,9 @@ export const testimonials: Testimonial[] = [
     text: "Working with Drake was an excellent experience from start to finish. He was professional, knowledgeable, and truly had my best interests in mind. Drake made everything feel smooth and straightforward.",
   },
   {
-    reviewerName: "chinaashcrash",
-    reviewerRole: "Investment Property Seller · Pontiac, MI",
-    text: "Drake completely changed how the property was being positioned. He really understood the investment angle, the cashflow, and the tenant situation. He took over and got results.",
+    reviewerName: "Daniel Aiken",
+    reviewerRole: "Rental Home Seeker · Woodbridge, Detroit, MI",
+    text: "Drake was extremely helpful when finding a rental house near the Wayne State campus. He showed me a variety of options online and came out many times to show the property and ensure that we loved our decision. Working with Drake was extremely easy and I recommend him to anyone who is looking to take action ASAP!",
   },
 ];
 

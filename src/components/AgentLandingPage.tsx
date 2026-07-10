@@ -241,71 +241,71 @@ function AboutSection() {
   );
 }
 
-function ListingsSection() {
-  const [isFrameLoaded, setIsFrameLoaded] = useState(false);
+// function ListingsSection() {
+//   const [isFrameLoaded, setIsFrameLoaded] = useState(false);
 
-  return (
-    <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
-        <div style={{ marginBottom: "3rem" }}>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#321E1E", marginBottom: "0.5rem" }}>
-            Current & past listings
-          </p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#321E1E", margin: "0 0 1.5rem" }}>
-            Active & Sold Listings
-          </h2>
-        </div>
-        <div style={{
-          position: "relative",
-          background: "#fff",
-          borderRadius: "8px",
-          overflow: "hidden",
-          border: "1px solid rgba(107,57,57,0.12)",
-          boxShadow: "0 8px 28px rgba(107,57,57,0.1)",
-        }}>
-          {!isFrameLoaded && (
-            <div style={{
-              position: "absolute", inset: 0,
-              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-              gap: "1rem", background: "#fff",
-            }}>
-              <div style={{
-                width: "36px", height: "36px",
-                border: "3px solid rgba(107,57,57,0.15)",
-                borderTopColor: "#321E1E",
-                borderRadius: "50%",
-                animation: "spin 0.8s linear infinite",
-              }} />
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "#888" }}>
-                Loading listings…
-              </span>
-            </div>
-          )}
-          <iframe
-            src="https://matrix.realcomponline.com/Matrix/public/IDX.aspx?idx=8d7811b7"
-            title="Active & Sold Listings"
-            width="100%"
-            height="900"
-            frameBorder="0"
-            marginWidth={0}
-            marginHeight={0}
-            onLoad={() => setIsFrameLoaded(true)}
-            style={{
-              display: "block",
-              border: "none",
-              height: "clamp(700px, 100vh - 220px, 1200px)",
-              opacity: isFrameLoaded ? 1 : 0,
-              transition: "opacity 0.3s ease",
-            }}
-          />
-        </div>
-        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "#999", marginTop: "1rem" }}>
-          Listings provided via RealComp Multiple Listing Service.
-        </p>
-      </div>
-    </section>
-  );
-}
+//   return (
+//     <section style={{ background: "#E8E8E8", padding: "6rem 2.5rem" }}>
+//       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
+//         <div style={{ marginBottom: "3rem" }}>
+//           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#321E1E", marginBottom: "0.5rem" }}>
+//             Current & past listings
+//           </p>
+//           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2.25rem", fontWeight: 400, color: "#321E1E", margin: "0 0 1.5rem" }}>
+//             Active & Sold Listings
+//           </h2>
+//         </div>
+//         <div style={{
+//           position: "relative",
+//           background: "#fff",
+//           borderRadius: "8px",
+//           overflow: "hidden",
+//           border: "1px solid rgba(107,57,57,0.12)",
+//           boxShadow: "0 8px 28px rgba(107,57,57,0.1)",
+//         }}>
+//           {!isFrameLoaded && (
+//             <div style={{
+//               position: "absolute", inset: 0,
+//               display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+//               gap: "1rem", background: "#fff",
+//             }}>
+//               <div style={{
+//                 width: "36px", height: "36px",
+//                 border: "3px solid rgba(107,57,57,0.15)",
+//                 borderTopColor: "#321E1E",
+//                 borderRadius: "50%",
+//                 animation: "spin 0.8s linear infinite",
+//               }} />
+//               <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "#888" }}>
+//                 Loading listings…
+//               </span>
+//             </div>
+//           )}
+//           <iframe
+//             src="https://matrix.realcomponline.com/Matrix/public/IDX.aspx?idx=8d7811b7"
+//             title="Active & Sold Listings"
+//             width="100%"
+//             height="900"
+//             frameBorder="0"
+//             marginWidth={0}
+//             marginHeight={0}
+//             onLoad={() => setIsFrameLoaded(true)}
+//             style={{
+//               display: "block",
+//               border: "none",
+//               height: "clamp(700px, 100vh - 220px, 1200px)",
+//               opacity: isFrameLoaded ? 1 : 0,
+//               transition: "opacity 0.3s ease",
+//             }}
+//           />
+//         </div>
+//         <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: "#999", marginTop: "1rem" }}>
+//           Listings provided via RealComp Multiple Listing Service.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
